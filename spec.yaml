@@ -1,0 +1,16 @@
+schemaVersion: "2"
+kind: mixin
+name: agent-sandbox
+
+setup:
+  install:
+    - command: >-
+        apt-get update && apt-get install -y
+        jq
+        pre-commit
+
+  startup:
+    - command:
+      - pre-commit install
+      user: "1000"
+      background: true

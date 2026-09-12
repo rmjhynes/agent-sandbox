@@ -8,6 +8,7 @@ setup:
         apt-get update && apt-get install -y
         jq
         pre-commit
+        yq
 
   startup:
     - command:

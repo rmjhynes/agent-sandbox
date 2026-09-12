@@ -1,0 +1,24 @@
+{
+  "model": "claude-sonnet-5",
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "tui": "fullscreen",
+  "theme": "dark-ansi",
+  "permissions": {
+    "deny": [
+        "Read(~/.aws/**)",
+        "Bash(terraform apply*)",
+        "Bash(terraform destroy*)"
+    ],
+    "allow": ["Bash(checkov*)",
+        "Bash(pre-commit run*)",
+        "Bash(pytest*)",
+        "Bash(tflint*)",
+        "Bash(uv pip install -r*)",
+        "Bash(uv venv*)"
+    ],
+    "ask": ["Bash(uv run*)"]
+  }
+}
